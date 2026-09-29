@@ -3208,7 +3208,7 @@ apply(settings.maxRetries(), settings.name());`,
           </tbody>
         </table>
       </div>
-      <p class="sources">Опора: «Безпека доступу до пам’яті»; Oracle, The Java Language Environment; Microsoft Learn, Unsafe code; MDN, Memory management; Oracle Java Tutorials про type erasure і нереіфіковні типи; JLS і CERT OBJ03-J; Effective Java, item 32; Microsoft Learn про boxing і generics in the runtime; специфікація nullable reference types; TypeScript Handbook про structural compatibility і soundness; реліз 2.6 про strictFunctionTypes.</p>`;
+      <p class="sources">Джерела даних: «Безпека доступу до пам’яті»; Oracle, The Java Language Environment; Microsoft Learn, Unsafe code; MDN, Memory management; Oracle Java Tutorials про type erasure і нереіфіковні типи; JLS і CERT OBJ03-J; Effective Java, item 32; Microsoft Learn про boxing і generics in the runtime; специфікація nullable reference types; TypeScript Handbook про structural compatibility і soundness; реліз 2.6 про strictFunctionTypes.</p>`;
   }
 
   function render() {
