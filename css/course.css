@@ -1,0 +1,181 @@
+:root {
+  --bg: #10120f;
+  --bg-raise: #181b16;
+  --line: #2c3128;
+  --ink: #ebe6dc;
+  --muted: #9a9486;
+  --faint: #6e6a60;
+  --brass: #d4b483;
+  --brass-dim: rgba(212, 180, 131, 0.16);
+  --serif: "Literata", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", "Cascadia Code", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(900px 420px at 0% -10%, rgba(212, 180, 131, 0.08), transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+a { color: inherit; }
+
+a:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2.4rem 1.4rem 3.5rem;
+}
+
+.uni {
+  margin: 0;
+  color: var(--brass);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0.7rem 0 0;
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: clamp(2.4rem, 5vw, 4.1rem);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  max-width: 16ch;
+}
+
+.rule {
+  width: 4.5rem;
+  height: 2px;
+  background: var(--brass);
+  margin: 1.3rem 0 1.1rem;
+}
+
+.audience {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+.teacher {
+  margin-top: 1.6rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.teacher p {
+  margin: 0;
+  color: var(--faint);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.teacher strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 560;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+
+.lectures {
+  margin-top: 2.4rem;
+}
+
+.lectures h2 {
+  margin: 0 0 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.lecture-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lecture-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  background: var(--bg-raise);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.05rem;
+}
+
+.lecture-card:hover {
+  border-color: var(--brass);
+}
+
+.lecture-card:hover .open {
+  color: var(--brass);
+}
+
+.num {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--brass);
+  min-width: 2.2rem;
+}
+
+.lecture-card h3 {
+  margin: 0 0 0.25rem;
+  font-family: var(--serif);
+  font-size: 1.28rem;
+  font-weight: 560;
+}
+
+.lecture-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.open {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .lecture-card {
+    grid-template-columns: auto 1fr;
+  }
+
+  .open {
+    grid-column: 2;
+  }
+}
